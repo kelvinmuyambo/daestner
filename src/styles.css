@@ -2,8 +2,99 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
-.navbar.navbar-dark .navbar-nav .nav-item.active > .nav-link {
+.navbar.navbar-dark .navbar-nav .nav-item.active > .nav-link, .navbar-brand.active {
     color: #a2eeff;
     border-bottom: solid 1px;
     background: none;
 }
+
+.view-container{
+    display: block;
+    position: relative;
+    overflow: auto;
+    height: 88vh;
+    top: 8vh;
+}
+
+.slide-left{
+    -webkit-animation: slide-left 0.5s forwards;
+    -webkit-animation-delay: 0.1s;
+    animation: slide-left 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+.slide-right{
+    -webkit-animation: slide-right 0.5s forwards;
+    -webkit-animation-delay: 0.1s;
+    animation: slide-right 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+.slide{
+    left:1000vh;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 0.1s;
+    animation: slide 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+@-webkit-keyframes slide-left {
+    100% { left: -2000; }
+}
+
+@keyframes slide-left {
+    100% { left: -2000; }
+}
+
+@-webkit-keyframes slide-right {
+    100% { right: -2000; }
+}
+
+@keyframes slide-right {
+    100% { right: -2000; }
+}
+
+
+
+
+.flip {
+	-webkit-animation: flip-scale-up-diag-2 1.2s linear both;
+	        animation: flip-scale-up-diag-2 1.2s linear both;
+}
+
+@keyframes flip-scale-up-diag-2 {
+    0% {
+      -webkit-transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+              transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+    }
+    /* 50% {
+      -webkit-transform: scale(5) rotate3d(-1, 1, 0, 90deg);
+              transform: scale(5) rotate3d(-1, 1, 0, 90deg);
+    } */
+    100% {
+      -webkit-transform: scale(1) rotate3d(1, 1, 0, 180deg);
+              transform: scale(1) rotate3d(1, 1, 0, 180deg);
+    }
+  }
+
+::-webkit-scrollbar {
+    width: .5em;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+  

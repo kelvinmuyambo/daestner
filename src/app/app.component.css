@@ -1,5 +1,7 @@
 .view {
-    height: calc(100vh - 56px);
+    background: url("../assets/img/banner_home_1.jpg")no-repeat center center;
+    background-size: cover;
+    min-height: calc(100vh);
 }
 
 .navbar {

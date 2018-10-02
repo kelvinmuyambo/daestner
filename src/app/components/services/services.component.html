@@ -1,0 +1,35 @@
+<div class="view-container">
+  <div class="container">
+    <div class="white-text wow fadeInUp text-center">
+      <br />
+      <h2 class="flip">Services</h2>
+      <br>
+      <p class="slide">
+        We are proud to have served the region's businesses as Innovative Business Systems the past three decades.
+        Throughout our company's history, we have sought to bring responsive service and common sense solutions to
+        our clients' IT concerns.
+      </p>
+    </div>
+  </div>
+  <br />
+  <div class="p-3 mt-4 bg-white">
+<div>
+    <input type="text" class="form-control mb-4 col-md-2 col-sm-6 offset-sm-6 offset-md-10" placeholder="Search for a service">
+    <div class="row">
+      <div class="col-md-4 col-sm-12 mb-3" *ngFor="let service of services">
+        <div class="card card-image mb-3 slide" [ngStyle]="{'background-image':'url(' + service.image + ')'}" (click)="select(service)">
+          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+            <div>
+              <h1 class="green-text fa fa-check flip" style="font-size:3em;"></h1>
+              <h5 class="white-text">{{service.name}}</h5>
+            </div>
+          </div>
+          <div class="card-body bg-white">
+            <p>{{service.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </div>
+</div>
